@@ -2,11 +2,14 @@
 #Credits to Fast Five l33ts
 clear
 figlet Up or Down 
-echo -e "\n\t\e[1;33mEnter URL :==>>"
+echo "======================================================"
+echo "==============Credits : Team Fast Five================"
+echo -e "\n"
+echo -e "\t\e[1;33mEnter URL :==>>"
 read url 
-status=`curl -Is $url | head -1| cut -d $' ' -f2`
+status=`curl -Is $url | head -1| cut -d $' ' -f2` 
  if [ "$status" == "200" ]
-then
+        then
   echo " Whoo website is up!"
 elif [ "$status" == "302" ] 
 	then
